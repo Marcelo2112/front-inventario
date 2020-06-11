@@ -1,0 +1,67 @@
+.targeta{
+  background-color: rgb(93, 180, 214);
+  padding: 30px;
+  width: 100%;
+  
+}
+
+.contenido {
+  background-color: rgba(44, 41, 41, 0.746);
+  width: 700px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
+
+nav{
+  
+  margin: 0 12px 0 0;
+  
+}
+nav a {
+  text-decoration: none;
+  color: black;
+}
+li{
+  text-align: right  ;
+  
+}
+ul{
+  list-style: none;
+}
+
+input {
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  font-size: 150%;
+}
+
+label{
+  color: white;
+  font-weight: bold;
+}
+
+.inputError{
+  border-color: red;
+  
+}
+button{
+  margin-top: 20px;
+  height: 30px;
+  width: 150px;
+  background-color: white;
+  color: black;
+  border: 1px solid yellowgreen;
+  margin-left: 35px;
+  margin-right: 35px;
+}
+button:hover{
+  background-color: yellowgreen;
+  color: white;
+}
+.botonlogin{
+  text-align: center;
+}
+
