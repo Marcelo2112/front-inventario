@@ -21,7 +21,7 @@ export default class Login extends React.Component{
 
              <div className="botonlogin">
                  <button>Ingresar</button>
-                 <button>Recuperar password</button>
+                 <button>Recuperar Contrase&ntilde;a</button>
              </div>
         </form>
         );

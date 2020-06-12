@@ -5,11 +5,9 @@ export default function Target(props){
 
     return (
         <section>
-            <div className="targeta">
-                <header>
-                    <h3>{title}</h3>
-                </header>
-                {children}
+            <div className="contenido">
+                
+                
             </div>
         </section>
     );

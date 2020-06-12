@@ -1,17 +1,29 @@
-.targeta{
+.barranav{
   background-color: rgb(93, 180, 214);
-  padding: 30px;
+  padding: 5px;
   width: 100%;
   
 }
 
-.contenido {
-  background-color: rgba(44, 41, 41, 0.746);
+.targeta {
+  background-color: rgba(67, 91, 102, 0.555);
   width: 700px;
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
+  text-align: center;
+  
+}
+.contenido{
+  background-color: yellowgreen;
+  border-color: tomato;
+  padding: 10px;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  
 }
 
 nav{
@@ -30,7 +42,10 @@ li{
 ul{
   list-style: none;
 }
-
+form div{
+  text-align: left;
+  margin: 20px;
+}
 input {
   margin-top: 5px;
   display: block;
@@ -56,6 +71,7 @@ button{
   border: 1px solid yellowgreen;
   margin-left: 35px;
   margin-right: 35px;
+  border-radius: 5px;
 }
 button:hover{
   background-color: yellowgreen;

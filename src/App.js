@@ -1,6 +1,7 @@
 import React from 'react';
 import Inicio from './views/Inicio';
 import Sesion from './views/Sesion';
+import Menu from './views/Menu';
 
 import { BrowserRouter as Router, Switch, Route} from
 'react-router-dom';
@@ -21,6 +22,10 @@ function App() {
       <Route path="/sesion">
         <Sesion/>
         </Route>
+        <Route path="/menu">
+        <Menu/>
+        </Route>
+
     </Router>
    
   );
