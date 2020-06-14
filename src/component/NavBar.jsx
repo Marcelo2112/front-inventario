@@ -9,7 +9,7 @@ export default function NavBar(props){
             <div className="barranav">
             <nav>
                 <ul>
-                    {props.links.map((link, key) =><li key ={key}><Link to={link.href}>{link.title}</Link> </li>)}
+                    {props.links.map((link, key) =><li className="textNav"  key ={key}><Link to={link.href}>{link.title}</Link> </li>)}
                 </ul>
             </nav>
             </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import Inicio from './views/Inicio';
 import Sesion from './views/Sesion';
 import Menu from './views/Menu';
+import Proveedor from './views/Proveedor';
 
 import { BrowserRouter as Router, Switch, Route} from
 'react-router-dom';
@@ -24,6 +25,9 @@ function App() {
         </Route>
         <Route path="/menu">
         <Menu/>
+        </Route>
+        <Route exact path="/registroproveedor">
+          <Proveedor/>
         </Route>
 
     </Router>

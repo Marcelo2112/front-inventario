@@ -6,6 +6,11 @@ export default function Target(props){
     return (
         <section>
             <div className="contenido">
+                <header>
+                    <h3>{title}</h3>
+                    </header>
+                  {children}  
+                
                 
                 
             </div>

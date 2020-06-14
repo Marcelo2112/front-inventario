@@ -16,10 +16,10 @@
   
 }
 .contenido{
-  background-color: yellowgreen;
-  border-color: tomato;
+  
+  border: 1px solid rgb(0, 0, 0);
   padding: 10px;
-  width: 700px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10%;
@@ -35,10 +35,36 @@ nav a {
   text-decoration: none;
   color: black;
 }
-li{
+.textNav{
   text-align: right  ;
   
 }
+
+.ulMenu{
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr  1fr;
+ 
+}
+
+.textMenu{
+  display: block;
+  border: 1px solid #999999;
+  width: 300px;
+  margin: 25px auto;
+  padding: 8px;
+  text-align: center;
+  background: #DDDDDD;
+  transition: 0.4s;
+  box-shadow: rgb(150,150,150) 2px 2px 5px;
+  
+}
+
+.textMenu:hover{
+  background-color: rgb(93, 180, 214);
+  transition: 0.4s;
+}
+
 ul{
   list-style: none;
 }
@@ -47,7 +73,7 @@ form div{
   margin: 20px;
 }
 input {
-  margin-top: 5px;
+  margin-top: 10px;
   display: block;
   width: 100%;
   font-size: 150%;
@@ -81,3 +107,14 @@ button:hover{
   text-align: center;
 }
 
+
+.registroProveedor {
+  display: grid;
+  grid-template-columns: 1fr  1fr;
+}
+
+.botonCancelar:hover {
+background-color: rgb(207, 48, 48);
+border: 1px solid black ;
+ 
+}
