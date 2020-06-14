@@ -12,11 +12,11 @@ export default class Login extends React.Component{
             type="text"
              />
 
-             <InputLine 
+             <InputLine
              name="password"
              label="Contrase&ntilde;a"
              type="password"
-             
+
              />
 
              <div className="botonlogin">

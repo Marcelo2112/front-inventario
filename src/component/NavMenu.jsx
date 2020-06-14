@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom';
 
 
 export default class NavMenu extends React.Component {
-    constructor (){
-        super();
-    }
+  constructor (){
+      super();
+  }
     render () {
         return (
         <section>

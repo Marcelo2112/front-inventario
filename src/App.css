@@ -2,7 +2,7 @@
   background-color: rgb(93, 180, 214);
   padding: 5px;
   width: 100%;
-  
+
 }
 
 .targeta {
@@ -13,23 +13,23 @@
   margin-right: auto;
   margin-top: 5%;
   text-align: center;
-  
+
 }
 .contenido{
-  
+
   border: 1px solid rgb(0, 0, 0);
   padding: 10px;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10%;
-  
+
 }
 
 nav{
-  
+
   margin: 0 12px 0 0;
-  
+
 }
 nav a {
   text-decoration: none;
@@ -37,14 +37,14 @@ nav a {
 }
 .textNav{
   text-align: right  ;
-  
+
 }
 
 .ulMenu{
   text-align: center;
   display: grid;
   grid-template-columns: 1fr  1fr;
- 
+
 }
 
 .textMenu{
@@ -57,7 +57,7 @@ nav a {
   background: #DDDDDD;
   transition: 0.4s;
   box-shadow: rgb(150,150,150) 2px 2px 5px;
-  
+
 }
 
 .textMenu:hover{
@@ -86,7 +86,7 @@ label{
 
 .inputError{
   border-color: red;
-  
+
 }
 button{
   margin-top: 20px;
@@ -113,8 +113,13 @@ button:hover{
   grid-template-columns: 1fr  1fr;
 }
 
+.RegistroProducto {
+  display: grid;
+  grid-template-columns: 1fr  1fr;
+}
+
 .botonCancelar:hover {
 background-color: rgb(207, 48, 48);
 border: 1px solid black ;
- 
+
 }
