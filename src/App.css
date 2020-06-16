@@ -41,7 +41,7 @@
   margin-left: 280px;
 }
 .TituloProducto{
-  margin-left: 420px;
+  margin-left: 250px;
 }
 
 nav{
@@ -120,6 +120,7 @@ button{
 button:hover{
   background-color: yellowgreen;
   color: white;
+  border: 1px solid black ;
 }
 .botonlogin{
   text-align: center;
@@ -139,5 +140,28 @@ button:hover{
 .botonCancelar:hover {
 background-color: rgb(207, 48, 48);
 border: 1px solid black ;
+
+}
+
+.inputError{
+  border-color: rgba(255, 0, 0, 0.842);
+  
+}
+
+.tabla{ 
+  width: 100%;
+  border: 1px solid black;
+  
+}
+
+td{ 
+  text-align: center;
+  
+  
+}
+
+tr{
+  border: 1px solid red;
+  margin-top: 100px;
 
 }
