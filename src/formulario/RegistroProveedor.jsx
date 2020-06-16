@@ -33,8 +33,8 @@ export default class RegistroProveedor extends React.Component{
         this.setState({
             registerProveedor
         });
-        
-    
+
+
     }
 
     doRegister = (event) => {
@@ -64,7 +64,7 @@ export default class RegistroProveedor extends React.Component{
                 apellido: apellidoError,
                 telefono: telefonoError,
                 email: emailError
-               
+
 
 
             }
@@ -75,7 +75,7 @@ export default class RegistroProveedor extends React.Component{
 
 
 
-    
+
 
 
 
@@ -93,77 +93,80 @@ export default class RegistroProveedor extends React.Component{
         } = this.state.registerProveedor;
 
         const {errors} = this.state;
-        
+
     return (
-        <form > 
-            <div className="registroProveedor">
-            <InputLine
-            name="nombreEmpresa"
-            label=" Nombre Empresa"
-            type="text"
-            required={true}
-            onChange={this.onChange}
-            error={errors.nombreEmpresa}
-            value={nombreEmpresa}
-            />
+      <>
+          <form >
+              <div className="registroProveedor">
+              <InputLine
+              name="nombreEmpresa"
+              label=" Nombre Empresa"
+              type="text"
+              required={true}
+              onChange={this.onChange}
+              error={errors.nombreEmpresa}
+              value={nombreEmpresa}
+              />
 
-            <InputLine
-            name="rutEmpresa"
-            label=" Rut Empresa"
-            type="text"
-            required={true}
-            onChange={this.onChange}
-            error={errors.rutEmpresa}
-            value={rutEmpresa}
-            />
+              <InputLine
+              name="rutEmpresa"
+              label=" Rut Empresa"
+              type="text"
+              required={true}
+              onChange={this.onChange}
+              error={errors.rutEmpresa}
+              value={rutEmpresa}
+              />
 
-             <InputLine
-            name="nombre"
-            label=" Nombre Personal"
-            type="text"
-            required={true}
-            onChange={this.onChange}
-            error={errors.nombre}
-            value={nombre}
-            />
-             <InputLine
-            name="apellido"
-            label=" Apellido Personal"
-            type="text"
-            required={true}
-            onChange={this.onChange}
-            error={errors.apellido}
-            value={apellido}
-            />
-            
-             <InputLine
-            name="telefono"
-            label= "Telefono"
-            type="text"
-            />
+               <InputLine
+              name="nombre"
+              label=" Nombre Personal"
+              type="text"
+              required={true}
+              onChange={this.onChange}
+              error={errors.nombre}
+              value={nombre}
+              />
+               <InputLine
+              name="apellido"
+              label=" Apellido Personal"
+              type="text"
+              required={true}
+              onChange={this.onChange}
+              error={errors.apellido}
+              value={apellido}
+              />
 
-            <InputLine
-            name="email"
-            label= "Correo"
-            type="email"
-            required={true}
-            onChange={this.onChange}
-            error={errors.email}
-            value={email}
-            />
-            </div>
-            <div className="botonlogin">
-                <button onClick={this.doRegister}>Guardar</button>
-                <button className="botonCancelar">Cancelar</button>
-            </div>
+               <InputLine
+              name="telefono"
+              label= "Telefono"
+              type="text"
+              />
 
-       
-        
+              <InputLine
+              name="email"
+              label= "Correo"
+              type="email"
+              required={true}
+              onChange={this.onChange}
+              error={errors.email}
+              value={email}
+              />
+              </div>
 
-        </form>
 
-        
-        
+
+
+
+          </form>
+          <div className="botonlogin">
+              <button onClick={this.doRegister}>Guardar</button>
+              <button className="botonCancelar">Cancelar</button>
+          </div>
+        </>
+
+
+
 
     );
     }

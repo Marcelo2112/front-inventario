@@ -11,14 +11,14 @@ const links = [
 
 
 
-function Sesion (){
+function Sesion (props){
     return (
         <>
         <NavBar links={links}/>
         <Target title="Ingresar">
-        <Login/>
+        <Login {...props}/>
         </Target>
-    
+
         </>
     )
 }

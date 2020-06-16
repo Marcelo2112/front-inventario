@@ -30,9 +30,7 @@ function App() {
           <Inicio/>
         </Route>
        </Switch>
-      <Route path="/sesion">
-        <Sesion/>
-        </Route>
+      <Route path="/sesion" component={Sesion} />
         <Route path="/menu">
         <Menu/>
         </Route>
