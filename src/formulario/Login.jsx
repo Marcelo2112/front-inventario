@@ -2,6 +2,12 @@ import React from 'react';
 import InputLine from '../component/InputLine';
 
 export default class Login extends React.Component{
+    doLogin = (event) => {
+      this.props.history.push('/menu')
+
+      event.preventDefault()
+    }
+
     render (){
         return(
 
@@ -20,7 +26,7 @@ export default class Login extends React.Component{
              />
 
              <div className="botonlogin">
-                 <button>Ingresar</button>
+                 <button onClick={this.doLogin}>Ingresar</button>
                  <button>Recuperar Contrase&ntilde;a</button>
              </div>
         </form>
