@@ -10,6 +10,10 @@ import { BrowserRouter as Router, Switch, Route} from
 'react-router-dom';
 
 import './App.css';
+import 'jquery/dist/jquery.min.js';
+import 'font-awesome/css/font-awesome.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/js/src/index.js";
 
 function App() {
   return (

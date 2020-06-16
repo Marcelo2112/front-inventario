@@ -70,9 +70,9 @@ export default class RegistroProducto extends React.Component{
 
             </div>
 
-            <div className="botonlogin">
-                <button >Guardar</button>
-                <button className="botonCancelar">Cancelar</button>
+            <div className="text-center">
+                <button className="btn btn-outline-primary mr-5 " type="button">Guardar</button>
+                <button type="button" className="btn btn-outline-danger ml-5">Cancelar</button>
             </div>
 
         </form>
