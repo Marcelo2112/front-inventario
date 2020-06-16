@@ -4,8 +4,9 @@ import Botones from '../component/Botones'
 
 
 export default class Navegation extends React.Component{
- return (
-    
+  render(){
+    return(
 
- );
+    );
+  }
 }

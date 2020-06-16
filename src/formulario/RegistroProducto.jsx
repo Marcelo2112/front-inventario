@@ -7,7 +7,7 @@ export default class RegistroProducto extends React.Component{
     return (
         <form >
             <div className="RegistroProducto">
-            <h3>Informacion Producto< /h3> <br />
+            <h3>Informacion Producto</h3> <br />
             <InputLine
             name="nombre"
             label="Nombre"
@@ -39,7 +39,7 @@ export default class RegistroProducto extends React.Component{
             </div>
 
             <div className="RegistroProducto">
-            <h3>Informacion Proveedor< /h3> <br />
+            <h3>Informacion Proveedor</h3> <br />
 
             <InputLine
             name="proveedor"

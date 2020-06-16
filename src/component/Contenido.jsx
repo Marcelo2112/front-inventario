@@ -5,14 +5,14 @@ export default function Target(props){
 
     return (
         <section>
-            <div className="contenido">
+            <div className="ModuloInventario">
                 <header>
                     <h3>{title}</h3>
                     </header>
-                  {children}  
-                
-                
-                
+                  {children}
+
+
+
             </div>
         </section>
     );

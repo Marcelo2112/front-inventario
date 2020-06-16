@@ -10,22 +10,21 @@ const links = [
     {href: 'cerrarsesion', title: 'Cerrar Sesion'}
 
 ]
-const hola = [
-    {href: 'moduloinventario', title:'Inventario'},
-    {href: 'solicitud', title:'Solicitud'},
-    {href: 'registroproveedor', title:'Proveedor'},
-    {href: 'insumo', title:'Insumo'}
+const modulo = [
+    {href: 'inventario', title:'Ver Inventario'},
+    {href: 'registroproducto', title:'Agregar Producto'}
 
 ]
 
 
 
-export default function Menu(){
+export default function ModuloInventario(){
     return(
         <>
         <NavBar links={links}/>
+          <h2 className="Titulo"> Modulo Inventario </h2>
              <Contenido>
-                 <NavMenu links ={hola}/>
+                 <NavMenu links ={modulo}/>
              </Contenido>
 
         </>

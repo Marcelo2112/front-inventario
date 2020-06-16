@@ -3,7 +3,8 @@ import Inicio from './views/Inicio';
 import Sesion from './views/Sesion';
 import Menu from './views/Menu';
 import Proveedor from './views/Proveedor';
-import Inventario from './views/Inventario';
+import Producto from './views/Producto';
+import ModuloInventario from './views/ModuloInventario';
 
 import { BrowserRouter as Router, Switch, Route} from
 'react-router-dom';
@@ -13,14 +14,14 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <Switch>
+       <Switch>
         <Route exact path="/">
           <Inicio/>
         </Route>
         <Route exact path="/inicio">
           <Inicio/>
         </Route>
-      </Switch>
+       </Switch>
       <Route path="/sesion">
         <Sesion/>
         </Route>
@@ -31,7 +32,10 @@ function App() {
           <Proveedor/>
         </Route>
         <Route exact path="/registroproducto">
-          <Inventario />
+          <Producto />
+        </Route>
+        <Route path="/moduloinventario">
+        <ModuloInventario />
         </Route>
 
     </Router>

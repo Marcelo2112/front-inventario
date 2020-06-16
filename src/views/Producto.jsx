@@ -17,7 +17,8 @@ function Inventario(){
     return (
         <>
         <NavBar links={links}/>
-        <Target title="Registro Producto">
+        <h2 className="TituloProducto"> Registro Producto </h2>
+        <Target>
             <RegistroProducto />
         </Target>
 

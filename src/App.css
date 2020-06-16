@@ -7,11 +7,11 @@
 
 .targeta {
   background-color: rgba(67, 91, 102, 0.555);
-  width: 700px;
+  width: 900px;
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%;
+  margin-top: 1%;
   text-align: center;
 
 }
@@ -24,6 +24,24 @@
   margin-right: auto;
   margin-top: 10%;
 
+}
+
+.ModuloInventario{
+
+  border: 1px solid rgb(0, 0, 0);
+  padding: 10px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+
+}
+
+.Titulo{
+  margin-left: 280px;
+}
+.TituloProducto{
+  margin-left: 420px;
 }
 
 nav{
