@@ -11,7 +11,7 @@ const links = [
 
 ]
 const modulo = [
-    {href: 'inventario', title:'Ver Inventario'},
+    {href: 'verinventario', title:'Ver Inventario'},
     {href: 'registroproducto', title:'Agregar Producto'}
 
 ]

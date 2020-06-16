@@ -24,7 +24,7 @@ return (
     required={required}
     value={value}
     onChange={(event) => onChange(name, event)}
-    className={error  ? 'inputError': undefined}
+    className={error  ? 'inputError': "form-control"}
 
     />
     </LineField>

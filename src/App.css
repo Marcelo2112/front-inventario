@@ -38,7 +38,7 @@
 }
 
 .Titulo{
-  margin-left: 280px;
+  margin-left: 320px;
 }
 .TituloProducto{
   margin-left: 250px;
@@ -90,12 +90,6 @@ form div{
   text-align: left;
   margin: 20px;
 }
-input {
-  margin-top: 10px;
-  display: block;
-  width: 100%;
-  font-size: 150%;
-}
 
 label{
   color: white;
@@ -106,22 +100,7 @@ label{
   border-color: red;
 
 }
-button{
-  margin-top: 20px;
-  height: 30px;
-  width: 150px;
-  background-color: white;
-  color: black;
-  border: 1px solid yellowgreen;
-  margin-left: 35px;
-  margin-right: 35px;
-  border-radius: 5px;
-}
-button:hover{
-  background-color: yellowgreen;
-  color: white;
-  border: 1px solid black ;
-}
+
 .botonlogin{
   text-align: center;
 }
@@ -145,23 +124,23 @@ border: 1px solid black ;
 
 .inputError{
   border-color: rgba(255, 0, 0, 0.842);
-  
+
 }
 
-.tabla{ 
+.tabla{
   width: 100%;
   border: 1px solid black;
-  
+  text-align: center;
+
 }
 
-td{ 
+td{
   text-align: center;
-  
-  
+
+
 }
 
 tr{
-  border: 1px solid red;
+  border: 1px;
   margin-top: 100px;
-
 }
