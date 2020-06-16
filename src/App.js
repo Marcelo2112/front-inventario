@@ -3,8 +3,10 @@ import Inicio from './views/Inicio';
 import Sesion from './views/Sesion';
 import Menu from './views/Menu';
 import Proveedor from './views/Proveedor';
+import ModuloProveedor from './views/ModuloProveedor';
 import Producto from './views/Producto';
 import ModuloInventario from './views/ModuloInventario';
+import VerProveedor from './views/VerProveedpr'
 
 import { BrowserRouter as Router, Switch, Route} from
 'react-router-dom';
@@ -14,7 +16,7 @@ import 'jquery/dist/jquery.min.js';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import "bootstrap/js/src/index.js";
-
+import RegistroProveedor from './formulario/RegistroProveedor';
 function App() {
   return (
     <Router>
@@ -31,6 +33,12 @@ function App() {
         </Route>
         <Route path="/menu">
         <Menu/>
+        </Route>
+        <Route exact path="/moduloproveedor">
+          <ModuloProveedor/>
+        </Route>
+        <Route exact path="/verproveedor">
+          <VerProveedor/>
         </Route>
         <Route exact path="/registroproveedor">
           <Proveedor/>

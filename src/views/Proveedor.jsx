@@ -17,7 +17,8 @@ function Proveedor(){
     return (
         <>
         <NavBar links={links}/>
-        <Target title="Registro Proveedor">
+        <h2 className="TituloProducto"> Registrar Proveedor </h2>
+        <Target title="Informacion Proveedor">
             <RegistroProveedor/>
         </Target>
 
