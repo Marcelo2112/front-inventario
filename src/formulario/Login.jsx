@@ -1,5 +1,6 @@
 import React from 'react';
 import InputLine from '../component/InputLine';
+import { isEmpty } from '../utilidades/validacion';
 
 export default class Login extends React.Component{
     doLogin = (event) => {
@@ -7,6 +8,7 @@ export default class Login extends React.Component{
 
       event.preventDefault()
     }
+
 
     render (){
         return(

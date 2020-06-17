@@ -8,7 +8,7 @@ import Producto from './views/Producto';
 import ModuloInventario from './views/ModuloInventario';
 import VerProveedor from './views/VerProveedpr';
 import VerInventario from './views/VerInventario';
-import RegistroProveedor from './formulario/RegistroProveedor';
+import NotFound from './views/NotFound'
 import Insumo from './views/Insumo';
 import ModuloInsumo from './views/ModuloInsumo';
 import VerInsumo from './views/VerInsumo';
@@ -33,7 +33,7 @@ function App() {
         <Route exact path="/inicio">
           <Inicio/>
         </Route>
-       </Switch>
+       
       <Route path="/sesion" component={Sesion} />
         <Route path="/menu">
         <Menu/>
@@ -42,9 +42,11 @@ function App() {
         <Route exact path="/moduloproveedor">
           <ModuloProveedor/>
         </Route>
+
         <Route exact path="/verproveedor">
           <VerProveedor/>
         </Route>
+
         <Route exact path="/registroproveedor">
           <Proveedor/>
         </Route>
@@ -52,9 +54,11 @@ function App() {
         <Route exact path="/registroproducto">
           <Producto />
         </Route>
+
         <Route path="/moduloinventario">
         <ModuloInventario />
         </Route>
+
         <Route exact path="/verinventario">
           <VerInventario />
         </Route>
@@ -63,13 +67,19 @@ function App() {
         <Route exact path="/moduloinsumo">
           <ModuloInsumo/>
         </Route>
+
         <Route exact path="/verinsumo">
           <VerInsumo/>
         </Route>
+
         <Route exact path="/registroinsumo">
           <Insumo/>
         </Route>
 
+        <Route path="*">
+          <NotFound/>
+        </Route>
+        </Switch>
     </Router>
 
   );

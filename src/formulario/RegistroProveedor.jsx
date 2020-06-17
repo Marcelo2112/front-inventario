@@ -97,6 +97,7 @@ export default class RegistroProveedor extends React.Component{
     return (
       <>
           <form >
+           
               <div className="registroProveedor">
               <InputLine
               name="nombreEmpresa"
@@ -154,14 +155,11 @@ export default class RegistroProveedor extends React.Component{
               />
               </div>
 
-
-
-
-
           </form>
           <div className="botonlogin">
               <input class="mr-5 btn btn-primary"  type="submit" value="Guardar" onClick={this.doRegister}/>
               <input class="mr-10 btn btn-danger"  type="submit" value="Cancelar"/>
+              
           </div>
         </>
 
