@@ -160,8 +160,8 @@ export default class RegistroProveedor extends React.Component{
 
           </form>
           <div className="botonlogin">
-              <button onClick={this.doRegister}>Guardar</button>
-              <button className="botonCancelar">Cancelar</button>
+              <input class="mr-5 btn btn-primary"  type="submit" value="Guardar" onClick={this.doRegister}/>
+              <input class="mr-10 btn btn-danger"  type="submit" value="Cancelar"/>
           </div>
         </>
 

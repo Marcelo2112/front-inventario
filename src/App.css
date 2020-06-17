@@ -64,6 +64,10 @@ nav a {
   grid-template-columns: 1fr  1fr;
 
 }
+.ulMenu:hover{
+  text-decoration: none;
+  color: aliceblue;
+}
 
 .textMenu{
   display: block;
@@ -81,6 +85,7 @@ nav a {
 .textMenu:hover{
   background-color: rgb(93, 180, 214);
   transition: 0.4s;
+  
 }
 
 ul{
@@ -144,3 +149,4 @@ tr{
   border: 1px;
   margin-top: 100px;
 }
+

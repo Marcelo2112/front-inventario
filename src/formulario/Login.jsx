@@ -26,8 +26,8 @@ export default class Login extends React.Component{
              />
 
              <div className="botonlogin">
-                 <button onClick={this.doLogin}>Ingresar</button>
-                 <button>Recuperar Contrase&ntilde;a</button>
+                 <input class="mr-5 btn btn-primary"  type="submit" value="Ingresar" onClick={this.doLogin}/>
+                 <input className="ml-5 btn btn-danger" type="submit" value="Recuperar Contrase&ntilde;a" />
              </div>
         </form>
         );
