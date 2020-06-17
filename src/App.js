@@ -9,6 +9,10 @@ import ModuloInventario from './views/ModuloInventario';
 import VerProveedor from './views/VerProveedpr';
 import VerInventario from './views/VerInventario';
 import RegistroProveedor from './formulario/RegistroProveedor';
+import Insumo from './views/Insumo';
+import ModuloInsumo from './views/ModuloInsumo';
+import VerInsumo from './views/VerInsumo';
+
 
 import { BrowserRouter as Router, Switch, Route} from
 'react-router-dom';
@@ -34,6 +38,7 @@ function App() {
         <Route path="/menu">
         <Menu/>
         </Route>
+
         <Route exact path="/moduloproveedor">
           <ModuloProveedor/>
         </Route>
@@ -43,6 +48,7 @@ function App() {
         <Route exact path="/registroproveedor">
           <Proveedor/>
         </Route>
+
         <Route exact path="/registroproducto">
           <Producto />
         </Route>
@@ -51,6 +57,17 @@ function App() {
         </Route>
         <Route exact path="/verinventario">
           <VerInventario />
+        </Route>
+
+        {/*Insumo*/}
+        <Route exact path="/moduloinsumo">
+          <ModuloInsumo/>
+        </Route>
+        <Route exact path="/verinsumo">
+          <VerInsumo/>
+        </Route>
+        <Route exact path="/registroinsumo">
+          <Insumo/>
         </Route>
 
     </Router>

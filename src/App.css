@@ -121,6 +121,16 @@ label{
   grid-template-columns: 1fr  1fr;
 }
 
+.registroInsumo {
+  display: grid;
+  grid-template-columns: 1fr  1fr;
+}
+
+.tituloparrilla {
+  position: relative;
+  left: 350px;
+}
+
 .botonCancelar:hover {
 background-color: rgb(207, 48, 48);
 border: 1px solid black ;
