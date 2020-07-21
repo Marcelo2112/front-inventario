@@ -39,6 +39,7 @@ class Login extends React.Component{
             .then(token => {
                 localStorage.setItem('token', token)
                 this.props.history.push('/menu')
+                
             }).catch(
                 err=>{
                     alert('Datos Incorrectos')
@@ -66,7 +67,7 @@ class Login extends React.Component{
         
         return(
 
-        <div>
+        <div className="tarjeta2020">
             <InputLine
             name="email"
             label="Correo"
@@ -86,7 +87,7 @@ class Login extends React.Component{
 
              />
 
-             <div className="botonlogin">
+             <div className="botonlogin tarjeta2020" >
                  <input className="mr-5 btn btn-primary"  
                  type="submit" value="Iniciar Sesion" 
                  onClick={this.haveErrors}/>

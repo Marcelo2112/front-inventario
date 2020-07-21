@@ -7,7 +7,7 @@ import NavMenu from '../component/NavMenu';
 
 const links = [
     {href: 'inicio', title:'Inicio'},
-    {href: 'cerrarsesion', title: 'Cerrar Sesion'}
+    {href: 'logout', title: 'Cerrar Sesion'}
 
 ]
 const hola = [

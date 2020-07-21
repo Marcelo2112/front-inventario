@@ -25,7 +25,7 @@ export default class ProveedorInfo extends React.Component{
         })
         .catch(err =>{
             console.log(err);
-            alert('No fue posible cargar sus pedidos');
+            alert('No es posible cargar la lista');
            
         })
     }

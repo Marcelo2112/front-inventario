@@ -21,3 +21,21 @@ export function getDeliveries(){
 
     });
 }
+
+export function registrar(proveedor){
+    const token = localStorage.getItem('token');
+    return fetch ('http://localhost:5000/registerinsumo',{
+        method: 'POST',
+        body: JSON.stringify({
+            nombreEmpresa: proveedor.nombre_empresa,
+            rutEmpresa: proveedor.rut_empresa,
+            nombre: proveedor.nombre_proveedor,
+            apellido: proveedor.apellido_proveedor,
+            telefono: proveedor.telefono_proveedor
+        }),
+        headers:{
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        }
+    })
+}
