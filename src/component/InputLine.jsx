@@ -9,24 +9,33 @@ export default function InputLine (props) {
         type,
         placeholder,
         required,
+        step,
         onChange,
         value,
         name,
-        error
+        error,
+        list
     }
  = props;
 
 
 return (
-    <LineField label = {label}>
-    <input type={type}
-    placeholder={placeholder}
-    required={required}
-    value={value}
-    onChange={(event) => onChange(name, event)}
-    className={error  ? "form-control is-invalid" : "form-control"}
+        <LineField label = {label}>
+     <input type={type}
+     placeholder={placeholder}
+        required={required}
+        value={value}
+        step={step}
+        list={list && list.id} 
+        onChange={(event) => onChange(name, event)}
+        className={error  ? "form-control is-invalid" : "form-control"}
 
-    />
+      />
+     {list &&
+     <datalist id={list.id}>
+         {list.options.map((option, key) => <option key={key}>{option}</option>)}    
+     </datalist>
+        }
     </LineField>
 );
 }

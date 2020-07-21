@@ -1,27 +1,33 @@
 import React from 'react'
 import Contenido from '../component/Contenido';
 import NavBar from '../component/NavBar';
+import ProveedorInfo from '../component/ProveedorInfo';
 import Proveedor from '../listas/Proveedor';
 
-const links = [
-    {href:'inicio', title: 'Inicio'},
-    {href: 'cerrarsesion', title: 'Cerrar Sesion'}
 
 
-]
 
+export default class VerProveedor extends React.Component{
+    state={
+        links : [
+            {href:'inicio', title: 'Inicio'},
+            {href: 'cerrarsesion', title: 'Cerrar Sesion'}
+        
+        ]
 
-function VerProveedor (){
+    }
+    
+    render (){
+        
         return (
         <>
-        <NavBar links={links}/>
+        <NavBar links={this.state.links}/>
         <h2 className="TituloProducto"> Ver Proveedor </h2>
         <Contenido >
-            <Proveedor/>
+            <ProveedorInfo/>
         </Contenido>
 
         </>    
     );
-}
+}}
 
-export default VerProveedor;

@@ -64,9 +64,6 @@ export default class RegistroProveedor extends React.Component{
                 apellido: apellidoError,
                 telefono: telefonoError,
                 email: emailError
-
-
-
             }
               });
 

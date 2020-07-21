@@ -12,6 +12,7 @@ import NotFound from './views/NotFound'
 import Insumo from './views/Insumo';
 import ModuloInsumo from './views/ModuloInsumo';
 import VerInsumo from './views/VerInsumo';
+import Logout from './views/Logout'
 
 
 import { BrowserRouter as Router, Switch, Route} from
@@ -31,6 +32,10 @@ function App() {
           <Inicio/>
         </Route>
         <Route exact path="/inicio">
+          <Inicio/>
+        </Route>
+
+        <Route exact path="/logout">
           <Inicio/>
         </Route>
        

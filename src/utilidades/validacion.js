@@ -1,5 +1,7 @@
 export function isEmpty (value) {
-    return value.trim() === '';
+    if (value.trim()===''){
+        return true;
+    }
+    return false;
      
-   
 }
