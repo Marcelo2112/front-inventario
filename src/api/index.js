@@ -6,7 +6,7 @@ export function login (usuario){
             password: usuario.password
         }),
         headers: {
-            'Content-type': 'application/json'
+            'Content-Type': 'application/json'
         } 
     });
 }
@@ -24,18 +24,18 @@ export function getDeliveries(){
 
 export function registrar(proveedor){
     const token = localStorage.getItem('token');
-    return fetch ('http://localhost:5000/registerinsumo',{
+    return fetch('http://localhost:5000/registerinsumo',{
         method: 'POST',
         body: JSON.stringify({
-            nombreEmpresa: proveedor.nombre_empresa,
-            rutEmpresa: proveedor.rut_empresa,
-            nombre: proveedor.nombre_proveedor,
-            apellido: proveedor.apellido_proveedor,
-            telefono: proveedor.telefono_proveedor
+            nombre_empresa: proveedor.nombreEmpresa,
+            rut_empresa: proveedor.rutEmpresa,
+            nombre_proveedor:proveedor.nombre,
+            apellido_proveedor: proveedor.apellido,
+            telefono_proveedor: proveedor.telefono
         }),
-        headers:{
+        headers: {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + token
         }
-    })
+    });
 }

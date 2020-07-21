@@ -12,20 +12,17 @@ export default class RegistroProveedor extends React.Component{
             rutEmpresa:'',
             nombre:'',
             apellido:'',
-            telefono:'',
-            email:''
+            telefono:''
         },
         errors:{
             nombreEmpresa: false,
             rutEmpresa: false,
             nombre: false,
             apellido: false,
-            telefono: false,
-            email: false
+            telefono: false
 
         }
     };
-
 
     onChange =(name, event) => {
         const value = event.target.value;
@@ -34,56 +31,54 @@ export default class RegistroProveedor extends React.Component{
         this.setState({
             registerProveedor
         });
-
-
-    }
-
-   
+    } 
 
     haveErrors = () =>{
         this.setState({
             errors:{
-                nombreEmpresa:isEmpty(this.state.loginData.nombreEmpresa),
-                rutEmpresa:isEmpty(this.state.loginData.rutEmpresa),
-                nombre:isEmpty(this.state.loginData.nombre),
-                apellido:isEmpty(this.state.loginData.apellido)
+                nombreEmpresa:isEmpty(this.state.registerProveedor.nombreEmpresa),
+                rutEmpresa:isEmpty(this.state.registerProveedor.rutEmpresa),
+                nombre:isEmpty(this.state.registerProveedor.nombre),
+                apellido:isEmpty(this.state.registerProveedor.apellido),
+                telefono:isEmpty(this.state.registerProveedor.telefono)
             }
-        },()=>{this.doLogin()})
+        },()=>{this.doRegistrar()})
     }
 
 
-    handy = () => {
+    doRegistrar = () => {
         if((this.state.errors.nombreEmpresa === false && 
             this.state.errors.rutEmpresa === false &&
             this.state.errors.nombre === false &&
-            this.state.errors.apellido === false)){
-            registrar(this.state.registerProveedor)
-            .then(response => {
+            this.state.errors.apellido === false )){
+                console.log(this.state.registerProveedor);
+                registrar(this.state.registerProveedor)
+                .then(response => {
                 if(!response.ok){
                     throw Error(response.statusText)
                 }
                 return response.text();
             })
-            .then(token => {
-                localStorage.setItem('token', token)
-                this.props.history.push('/registroproveedor')
+            .then( response => {
                 alert('Registro guardado con exito!')
-                
-            }).catch(
+                this.setState({
+                    registerProveedor:{
+                        nombreEmpresa:'',
+                        rutEmpresa:'',
+                        nombre:'',
+                        apellido:'',
+                        telefono:''
+                    }
+
+                })
+                }
+            ).catch(
                 err=>{
-                    alert('Rellene campos obligatorios')
+                    
                 }
         )
     }
 }
-
-
-
-
-
-
-
-
 
     render(){
 
@@ -92,8 +87,7 @@ export default class RegistroProveedor extends React.Component{
             rutEmpresa,
             nombre,
             apellido,
-            telefono,
-            email
+            telefono
 
         } = this.state.registerProveedor;
 
@@ -148,6 +142,8 @@ export default class RegistroProveedor extends React.Component{
               label= "Telefono"
               type="text"
               onChange={this.onChange}
+              value={telefono}
+              required={false}
               />
 
               
@@ -157,7 +153,7 @@ export default class RegistroProveedor extends React.Component{
           <div className="botonlogin">
               <input className="mr-5 btn btn-primary"
               type="submit" value="Guardar"
-              onClick={this.handy}/>
+              onClick={this.haveErrors}/>
               <input className="mr-10 btn btn-danger"
               type="submit"
               value="Cancelar"/>
