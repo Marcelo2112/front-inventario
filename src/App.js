@@ -35,9 +35,7 @@ function App() {
           <Inicio/>
         </Route>
 
-        <Route exact path="/logout">
-          <Inicio/>
-        </Route>
+      <Route path="/Logout" component={Logout}/>
        
       <Route path="/sesion" component={Sesion} />
         <Route path="/menu">

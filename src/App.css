@@ -6,7 +6,7 @@
 }
 
 .targeta {
-  background-color: rgba(67, 91, 102, 0.555);
+  background-color: rgba(78, 101, 117, 0.513);
   width: 900px;
   padding: 10px;
   margin-left: auto;
@@ -40,9 +40,17 @@
 .Titulo{
   margin-left: 320px;
 }
-.TituloProducto{
-  margin-left: 250px;
+
+.Titulo1{
+  text-align: center;
+  
 }
+
+.TituloProducto{
+  margin-left: 350px;
+}
+
+
 
 nav{
 

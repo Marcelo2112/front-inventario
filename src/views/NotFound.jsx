@@ -7,7 +7,7 @@ import Contenido from '../component/Contenido';
 
 const links = [
     {href: 'menu', title:'inicio'},
-    {href: 'cerrarsesion', title: 'Cerrar Sesion'}
+    {href: 'logout', title: 'Cerrar Sesion'}
 
 ];
 

@@ -93,7 +93,7 @@ class Login extends React.Component{
                  onClick={this.haveErrors}/>
                  <input className="ml-5 btn btn-danger" 
                  type="submit" 
-                 value="Recuperar Contrase&ntilde;a" />
+                 value="Recuperar Contrase&ntilde;a"  />
              </div>
         </div>
         );

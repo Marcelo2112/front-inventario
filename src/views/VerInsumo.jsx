@@ -1,13 +1,13 @@
 import React from 'react'
 import Contenido from '../component/Contenido';
 import NavBar from '../component/NavBar';
-import Insumo from '../listas/Insumo';
 import Search from '../component/Search';
 import Paginacion from '../component/Paginacion';
+import InsumoInfo from '../component/InsumoInfo'
 
 const links = [
-    {href:'inicio', title: 'Inicio'},
-    {href: 'cerrarsesion', title: 'Cerrar Sesion'}
+    {href:'menu', title: 'Inicio'},
+    {href: 'logout', title: 'Cerrar Sesion'}
 
 
 ]
@@ -21,7 +21,7 @@ function VerInsumo (){
         <Search />
         <div className="container">
         <Contenido>
-            <Insumo/>
+            <InsumoInfo/>
         </ Contenido>
         <br />
         <Paginacion />

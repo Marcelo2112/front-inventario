@@ -5,7 +5,7 @@ import Target from '../component/Target';
 
 const links = [
     {href: 'menu', title:'Inicio'},
-    {href: 'sesion', title: 'Cerrar Sesion'}
+    {href: 'logout', title: 'Cerrar Sesion'}
 ]
 
 function Insumo(){

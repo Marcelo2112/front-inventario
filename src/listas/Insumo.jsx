@@ -5,43 +5,30 @@ export default class Insumo extends React.Component {
         return (
             <form>  
                 <table className="tabla">
+                <thead>
                  <tr>
                     <th>Insumo</th>
                     <th>Codigo</th>
                     <th>Cantidad</th>
                     <th>Color</th>
                     <th>Medidas</th>
-                    <th>Marca</th>
-                    <th>Proveedor</th>
-                    <th>Rut</th>
-                    <th>Encargado</th>                    
+                    <th>Marca</th>               
                  </tr>
-
-                <tr>
-                    <td>Silla</td>
-                    <td>25332</td>
-                    <td>20</td>
-                    <td>Cafe</td>
-                    <td>100x200x300</td>
-                    <td>Marca1</td>
-                    <td>Proveedor1</td>
-                    <td>25.486.425-5</td>
-                    <td>Matias C</td>
-                    
-                 </tr>
-
-                <tr>
-                    <td>Mesa</td>
-                    <td>25333</td>
-                    <td>10</td>
-                    <td>Cafe</td>
-                    <td>100x200x300</td>
-                    <td>Marca1</td>
-                    <td>Proveedor1</td>
-                    <td>25.486.425-5</td>
-                    <td>Matias C</td>
-                   </tr>
-                </table>
+                 </thead>
+                 <tbody>
+                     {this.props.insumos.map((insumo,key) =>(
+                         <tr key={key}>
+                            <td>{insumo.nombre_insumo}</td>
+                            <td>{insumo.codigo_insumo}</td>
+                            <td>{insumo.cantidad_insumo}</td>
+                            <td>{insumo.color_insumo}</td>
+                            <td>{insumo.medidas_insumo}</td>
+                            <td>{insumo.marca_insumo}</td>
+                         </tr>
+                )
+                )}
+            </tbody>
+            </table>
 
             </form>
         );

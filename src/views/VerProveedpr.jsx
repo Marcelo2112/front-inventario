@@ -2,7 +2,7 @@ import React from 'react'
 import Contenido from '../component/Contenido';
 import NavBar from '../component/NavBar';
 import ProveedorInfo from '../component/ProveedorInfo';
-import Proveedor from '../listas/Proveedor';
+
 
 
 
@@ -10,8 +10,8 @@ import Proveedor from '../listas/Proveedor';
 export default class VerProveedor extends React.Component{
     state={
         links : [
-            {href:'inicio', title: 'Inicio'},
-            {href: 'cerrarsesion', title: 'Cerrar Sesion'}
+            {href:'menu', title: 'Inicio'},
+            {href: 'logout', title: 'Cerrar Sesion'}
         
         ]
 

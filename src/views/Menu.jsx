@@ -6,7 +6,7 @@ import NavMenu from '../component/NavMenu';
 
 
 const links = [
-    {href: 'inicio', title:'Inicio'},
+    {href: 'menu', title:'Inicio'},
     {href: 'logout', title: 'Cerrar Sesion'}
 
 ]
@@ -22,7 +22,7 @@ export default function Menu(){
     return(
         <>
         <NavBar links={links}/>
-        <h2 className="Titulo"> Menu </h2>
+        <h2 className="Titulo1">  Sistema Gestion de Inventario </h2>
              <Contenido>
                  <NavMenu links ={hola}/>
              </Contenido>

@@ -106,7 +106,7 @@ export default class RegistroProducto extends React.Component{
       <>
         <form >
             <div className="RegistroProducto">
-            <h3>Informacion Producto</h3> <br />
+            <h3 className="Pruebazx">Informacion Producto</h3> <br />
             <InputLine
             name="nombre"
             label="Nombre"

@@ -75,10 +75,10 @@ export default class RegistroProveedor extends React.Component{
             ).catch(
                 err=>{
                     
-                }
-        )
-    }
-}
+                                }
+                        )
+                    }
+            }
 
     render(){
 

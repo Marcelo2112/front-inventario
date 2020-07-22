@@ -4,7 +4,7 @@ import { Redirect } from 'react-router'
 function Logout (props) {
     localStorage.removeItem('token');
     return (
-        <Redirect to='/' />
+        <Redirect to='/sesion' />
     )
 }
 

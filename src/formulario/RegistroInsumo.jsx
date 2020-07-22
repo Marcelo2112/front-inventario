@@ -1,6 +1,7 @@
 import React from 'react';
 import InputLine from '../component/InputLine';
 import { isEmpty } from '../utilidades/validacion';
+import { registrar2 } from '../api';
 
 
 
@@ -12,10 +13,7 @@ export default class RegistroInsumo extends React.Component{
             cantidadInsumo:'',        
             colorInsumo:'',
             medidasInsumo:'',
-            marcaInsumo:'',
-            nombreProveedor:'',
-            rutProveedor:'',
-            nombreEncargado:''            
+            marcaInsumo:''         
         },
         errors:{
             nombreInsumo: false,
@@ -23,11 +21,7 @@ export default class RegistroInsumo extends React.Component{
             cantidadInsumo: false, 
             colorInsumo: false,
             medidasInsumo: false,
-            marcaInsumo: false,
-            nombreProveedor: false,
-            rutProveedor: false,
-            nombreEncargado: false 
-
+            marcaInsumo: false
         }
     };
 
@@ -41,47 +35,54 @@ export default class RegistroInsumo extends React.Component{
         });
     }
 
-    doRegister = (event) => {
-        const{
-            nombreInsumo,
-            codigoInsumo,
-            cantidadInsumo,
-            colorInsumo,
-            medidasInsumo,
-            marcaInsumo,
-            nombreProveedor,
-            rutProveedor,
-            nombreEncargado 
-
-        } = this.state.registerInsumo;
-
-
-        const nombreInsumoError = isEmpty(nombreInsumo);
-        const codigoInsumoError = isEmpty (codigoInsumo);
-        const cantidadInsumoError = isEmpty (cantidadInsumo);
-        const colorInsumoError = isEmpty (colorInsumo);
-        const medidasInsumoError = isEmpty (medidasInsumo);
-        const marcaInsumoError = isEmpty (marcaInsumo);
-        const nombreProveedorError = isEmpty (nombreProveedor);
-        const rutProveedorError = isEmpty (rutProveedor);
-        const nombreEncargadoError = isEmpty (nombreEncargado);
-
+    haveErrors = () =>{
         this.setState({
             errors:{
-                nombreInsumo:nombreInsumoError,
-                codigoInsumo:codigoInsumoError,
-                cantidadInsumo:cantidadInsumoError,
-                colorInsumo: colorInsumoError,
-                medidasInsumo: medidasInsumoError,
-                marcaInsumo: marcaInsumoError,
-                nombreProveedor: nombreProveedorError,
-                rutProveedor: rutProveedorError,
-                nombreEncargado: nombreEncargadoError
+                nombreInsumo:isEmpty(this.state.registerInsumo.nombreInsumo),
+                codigoInsumo:isEmpty(this.state.registerInsumo.codigoInsumo),
+                cantidadInsumo:isEmpty(this.state.registerInsumo.cantidadInsumo),
+                medidasInsumo:isEmpty(this.state.registerInsumo.medidasInsumo),
+                marcaInsumo:isEmpty(this.state.registerInsumo.marcaInsumo)
             }
-        });
-
-        event.preventDefault();
+        },()=>{this.doRegistrar()})
     }
+
+
+    doRegistrar = () => {
+        if((this.state.errors.nombreInsumo === false && 
+            this.state.errors.codigoInsumo === false &&
+            this.state.errors.cantidadInsumo === false &&
+            this.state.errors.medidasInsumo === false &&
+            this.state.errors.marcaInsumo === false )){
+                console.log(this.state.registerInsumo);
+                registrar2(this.state.registerInsumo)
+                .then(response => {
+                if(!response.ok){
+                    throw Error(response.statusText)
+                }
+                return response.text();
+            })
+            .then( response => {
+                alert('Registro guardado con exito!')
+                this.setState({
+                    registerInsumo:{
+                        nombreInsumo:'',
+                        codigoInsumo:'',
+                        cantidadInsumo:'',        
+                        colorInsumo:'',
+                        medidasInsumo:'',
+                        marcaInsumo:''
+                    }
+
+                })
+                }
+            ).catch(
+                err=>{
+                    
+                                }
+                        )
+                    }
+            }
 
     render(){
 
@@ -91,10 +92,7 @@ export default class RegistroInsumo extends React.Component{
             cantidadInsumo,
             colorInsumo,
             medidasInsumo,
-            marcaInsumo,
-            nombreProveedor,
-            rutProveedor,
-            nombreEncargado
+            marcaInsumo
 
         } = this.state.registerInsumo;
 
@@ -165,44 +163,15 @@ export default class RegistroInsumo extends React.Component{
                 value={marcaInsumo}
                 />
 
-                <h3 className = "tituloparrilla" >Proveedor</h3> <br/>
-
-                <InputLine
-                name="nombreProveedor"
-                label= "Proveedor"
-                type="nombreProveedor"
-                required={true}
-                onChange={this.onChange}
-                error={errors.nombreProveedor}
-                value={nombreProveedor}
-                />
-
-                <InputLine
-                name="rutProveedor"
-                label= "Rut"
-                type="rutProveedor"
-                required={true}
-                onChange={this.onChange}
-                error={errors.rutProveedor}
-                value={rutProveedor}
-                />
-
-                <InputLine
-                name="nombreEncargado"
-                label= "Nombre"
-                type="nombreEncargado"
-                required={true}
-                onChange={this.onChange}
-                error={errors.nombreEncargado}
-                value={nombreEncargado}
-                />
 
                 </div>
 
                </form>
 
             <div className="botonlogin">
-                <input class="mr-5 btn btn-primary"  type="submit" value="Guardar" onClick={this.doRegister}/>
+                <input class="mr-5 btn btn-primary"
+                type="submit" value="Guardar"
+                onClick={this.haveErrors}/>
                 <input class="mr-10 btn btn-danger"  type="submit" value="Cancelar"/>
             </div>
         </>

@@ -7,8 +7,8 @@ import Paginacion from '../component/Paginacion';
 
 
 const links = [
-    {href:'inicio', title: 'Inicio'},
-    {href: 'cerrarsesion', title: 'Cerrar Sesion'}
+    {href:'menu', title: 'Inicio'},
+    {href: 'logout', title: 'Cerrar Sesion'}
 
 
 ]
