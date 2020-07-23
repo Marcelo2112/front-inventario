@@ -1,9 +1,9 @@
 import React from 'react'
 import Contenido from '../component/Contenido';
 import NavBar from '../component/NavBar';
-import Inventario from '../listas/Inventario';
 import Search from '../component/Search';
 import Paginacion from '../component/Paginacion';
+import Productoinfo from '../component/Productoinfo'
 
 
 const links = [
@@ -22,7 +22,7 @@ function VerInventario (){
         <Search />
         <div className="container">
         <Contenido>
-            <Inventario />
+            <Productoinfo/>
         </ Contenido>
         <br />
         <Paginacion />

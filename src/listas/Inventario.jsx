@@ -3,38 +3,33 @@ import React from 'react';
 export default class Inventario extends React.Component {
   render(){
     return(
-      <>
+     
       <form>
           <table className="tabla">
+          <thead>
            <tr>
               <th>Codigo</th>
               <th>Nombre</th>
-              <th>Descripcion</th>
-              <th>Cantidad</th>
+              <th>Color</th>
+              <th>Medidas</th>
+              <th>Marca</th>
 
            </tr>
-          <tr>
-              <td>5874698</td>
-              <td>Herramienta</td>
-              <td>Descrpcion 1</td>
-              <td>20</td>
-
-           </tr>
-          <tr>
-              <td>5963245</td>
-              <td>Herramienta 2</td>
-              <td>Descrpcion 2</td>
-              <td>15</td>
-          </tr>
-          <tr>
-              <td>5965645</td>
-              <td>Herramienta 3</td>
-              <td>Descrpcion 3</td>
-              <td>10</td>
-          </tr>
+           </thead>
+           <tbody>
+                {this.props.productos.map((producto,key) =>(
+                    <tr key={key}>
+                        <td>{producto.codigo_producto}</td>
+                        <td>{producto.nombre_producto}</td>
+                        <td>{producto.color_producto}</td>
+                        <td>{producto.medidas_producto}</td>
+                        <td>{producto.marca_producto}</td>
+                    </tr>
+                )
+                )}
+            </tbody>
           </table>
       </form>
-      </>
     );
   }
 }

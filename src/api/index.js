@@ -61,10 +61,41 @@ export function registrar2(insumo){
     });
 }
 
+export function registrar3(producto){
+    const token = localStorage.getItem('token');
+    return fetch('http://localhost:5000/registerinsumo3',{
+        method: 'POST',
+        body: JSON.stringify({
+
+            nombre_producto :producto.nombreProducto,
+            codigo_producto : producto.codigoProducto,
+            color_producto : producto.colorProducto,
+            medidas_producto : producto.medidasProducto,
+            marca_producto : producto.marcaProducto
+            
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        }
+    });
+}
 
 export function verInsumo(){
     const token = localStorage.getItem('token');
     return fetch('http://localhost:5000/registerinsumo2',{
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        }
+
+    });
+}
+
+export function verProducto(){
+    const token = localStorage.getItem('token');
+    return fetch('http://localhost:5000/registerinsumo3',{
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
